@@ -61,6 +61,12 @@ switch (mes) {
 }
 
 // 3. Crie um programa que verifica se uma pessoa pode dirigir. Use a variável `idade` e mostre "Pode dirigir" ou "Não pode dirigir".
+
+let idade = 18;
+let respostaIdade = idade >= 18 ? "Pode dirigir" : "Não pode dirigir"
+console.log(respostaIdade)
+
+
 // 4. Use o operador ternário para verificar se uma variável `saldo` é maior que 0 e exiba "Saldo positivo" ou "Saldo negativo".
 // 5. Escreva um programa que classifique números em "Positivo", "Negativo" ou "Zero".
 // 6. Crie um sistema de opções para um caixa eletrônico: "1 - Sacar", "2 - Depositar", "3 - Saldo". Use `switch` para processar a escolha.
