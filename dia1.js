@@ -41,3 +41,7 @@ estaLogado = true;
 console.log(`Status de login: ${estaLogado}`);
 
 // 6. Crie uma variável constante chamada `PI` com o valor `3.14`. Use-a para calcular a área de um círculo com raio 5 e mostre o resultado.
+
+const PI = 3.14;
+let areaCirculo = PI * (5**2);
+console.log(areaCirculo);
