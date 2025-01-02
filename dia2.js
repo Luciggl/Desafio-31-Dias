@@ -68,5 +68,10 @@ console.log(respostaIdade)
 
 
 // 4. Use o operador ternário para verificar se uma variável `saldo` é maior que 0 e exiba "Saldo positivo" ou "Saldo negativo".
+
+let saldo = 0;
+let respostaSaldo = saldo >= 0 ? "Saldo positivo" : "Saldo negativo"
+console.log(respostaSaldo)
+
 // 5. Escreva um programa que classifique números em "Positivo", "Negativo" ou "Zero".
 // 6. Crie um sistema de opções para um caixa eletrônico: "1 - Sacar", "2 - Depositar", "3 - Saldo". Use `switch` para processar a escolha.
