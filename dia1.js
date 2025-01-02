@@ -1,8 +1,6 @@
 // ### **🎯 Exercícios Práticos**
 
-// Agora é a sua vez! 💪 Resolva os exercícios abaixo:
-
-// 1. Crie uma variável para armazenar seu nome e outra para sua idade. Imprima uma frase como: "Meu nome é [nome] e tenho [idade] anos".
+// 1. Crie uma variável  para armazenar seu nome e outra para sua idade. Imprima uma frase como: "Meu nome é [nome] e tenho [idade] anos".
 
 let nome = "Luciélio";
 let idade = 22;
