@@ -26,5 +26,12 @@ const comidas = ["Arroz", "Feijão", "Batata"];
 console.log(comidas[1]);
 
 // 4. Crie um objeto que represente um livro, com propriedades como `titulo`, `autor` e `ano`. Mostre no console o título e o autor.
+const livro = {
+    titulo: "A Pantera cor de Rosa",
+    autor: "Antoin Juvino",
+    ano: 1981
+}
+
+console.log(`${livro.titulo} por ${livro.autor}`)
 // 5. Declare uma variável `estaLogado` com o valor `false`. Depois, mude o valor para `true` e imprima a mensagem: "Status de login: [valor da variável]".
 // 6. Crie uma variável constante chamada `PI` com o valor `3.14`. Use-a para calcular a área de um círculo com raio 5 e mostre o resultado.
