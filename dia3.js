@@ -18,6 +18,22 @@ console.log(resposta)
     
 
 // 3. Use `&&` e `||` para criar um sistema de login onde um usuário pode entrar com email **ou** nome de usuário, mas precisa fornecer uma senha válida.
+
+const Usuario = {
+    nome: "Lucielio",
+    email: "Lucielio@test",
+    passWord: "123"
+}
+
+let login = "Lucielio"
+let senha = "123"
+
+if(Usuario.nome === login || Usuario.email === login){
+    if(Usuario.passWord === senha){
+        console.log("Logado com sucesso")
+    } else console.log("Usuario ou senha incorretas")
+} else console.log(`O login ${login} não foi encontrado`)
+
 // 4. Implemente um sistema de notas onde:
 //     - Notas >= 90: "Aprovado com A"
 //     - Notas >= 70 e < 90: "Aprovado com B"
