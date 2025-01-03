@@ -84,3 +84,21 @@ classificarNumeros = (numero) => {
 classificarNumeros(3)
 
 // 6. Crie um sistema de opções para um caixa eletrônico: "1 - Sacar", "2 - Depositar", "3 - Saldo". Use `switch` para processar a escolha.
+
+let operacao
+
+operacao = 1
+
+switch (operacao) {
+    case 1:
+        console.log("Sacar")
+        break
+    case 2:
+        console.log("Depositar")
+        break
+    case 3:
+        console.log("Saldo")
+        break
+    default:
+        console.log("Operação invalida")
+}
