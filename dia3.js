@@ -57,3 +57,6 @@ if(saldo === 0) console.log("Sem Saldo")
 if(saldo < 0) console.log("Saldo negativo")
 
 // 6. Use o operador `!` para verificar se uma luz está apagada e ligue-a.
+
+let estaAcesa = false
+if(!estaAcesa) estaAcesa = true
