@@ -49,4 +49,11 @@ if (nota < 70) console.log("Reprovado")
 //     - Se `saldo > 0`: Mostre "Saldo positivo".
 //     - Se `saldo === 0`: Mostre "Sem saldo".
 //     - Caso contrário, mostre "Saldo negativo".
+
+let saldo = -10;
+
+if(saldo > 0) console.log("Saldo positivo")
+if(saldo === 0) console.log("Sem Saldo")
+if(saldo < 0) console.log("Saldo negativo")
+
 // 6. Use o operador `!` para verificar se uma luz está apagada e ligue-a.
