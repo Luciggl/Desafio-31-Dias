@@ -10,6 +10,13 @@ if(numero > 10 && numero < 20){
 } else console.log("O numero não atende os requisitos")
 
 // 2. Crie um código que verifique se uma pessoa pode votar. Considere idade >= 16.
+
+let idade = 18;
+
+let resposta = idade >= 16 ? "pode votar" : "Não pode votar"
+console.log(resposta)
+    
+
 // 3. Use `&&` e `||` para criar um sistema de login onde um usuário pode entrar com email **ou** nome de usuário, mas precisa fornecer uma senha válida.
 // 4. Implemente um sistema de notas onde:
 //     - Notas >= 90: "Aprovado com A"
