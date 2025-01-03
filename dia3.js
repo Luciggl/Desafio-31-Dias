@@ -30,14 +30,21 @@ let senha = "123"
 
 if(Usuario.nome === login || Usuario.email === login){
     if(Usuario.passWord === senha){
-        console.log("Logado com sucesso")
-    } else console.log("Usuario ou senha incorretas")
-} else console.log(`O login ${login} não foi encontrado`)
+        console.log("Logado com sucesso");
+    } else console.log("Usuario ou senha incorretas");
+} else console.log(`O login ${login} não foi encontrado`);
 
 // 4. Implemente um sistema de notas onde:
 //     - Notas >= 90: "Aprovado com A"
 //     - Notas >= 70 e < 90: "Aprovado com B"
 //     - Notas < 70: "Reprovado".
+
+let nota = 90;
+
+if (nota >= 90) console.log("Aprovado com A");
+if (nota >= 70 && nota <90) console.log("Aprovado com B")
+if (nota < 70) console.log("Reprovado")
+
 // 5. Crie uma variável `saldo` e verifique:
 //     - Se `saldo > 0`: Mostre "Saldo positivo".
 //     - Se `saldo === 0`: Mostre "Sem saldo".
