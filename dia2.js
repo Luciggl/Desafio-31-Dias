@@ -74,4 +74,13 @@ let respostaSaldo = saldo >= 0 ? "Saldo positivo" : "Saldo negativo"
 console.log(respostaSaldo)
 
 // 5. Escreva um programa que classifique números em "Positivo", "Negativo" ou "Zero".
+
+classificarNumeros = (numero) => {
+    if (numero > 0) console.log("Positivo");
+    if (numero < 0) console.log("negativo");
+    if (numero == 0) console.log("Zero")
+}
+
+classificarNumeros(3)
+
 // 6. Crie um sistema de opções para um caixa eletrônico: "1 - Sacar", "2 - Depositar", "3 - Saldo". Use `switch` para processar a escolha.
