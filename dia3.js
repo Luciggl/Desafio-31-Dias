@@ -5,7 +5,7 @@ let numero;
 
 numero = 19
 
-if(numero > 10 && numero < 20){
+if (numero > 10 && numero < 20) {
     console.log(`O numero ${numero} esta entre 10 e 20`)
 } else console.log("O numero não atende os requisitos")
 
@@ -15,7 +15,7 @@ let idade = 18;
 
 let resposta = idade >= 16 ? "pode votar" : "Não pode votar"
 console.log(resposta)
-    
+
 
 // 3. Use `&&` e `||` para criar um sistema de login onde um usuário pode entrar com email **ou** nome de usuário, mas precisa fornecer uma senha válida.
 
@@ -28,10 +28,8 @@ const Usuario = {
 let login = "Lucielio"
 let senha = "123"
 
-if(Usuario.nome === login || Usuario.email === login){
-    if(Usuario.passWord === senha){
-        console.log("Logado com sucesso");
-    } else console.log("Usuario ou senha incorretas");
+if ((Usuario.nome === login || Usuario.email === login) && Usuario.passWord === senha) {
+    console.log("Logado com sucesso");
 } else console.log(`O login ${login} não foi encontrado`);
 
 // 4. Implemente um sistema de notas onde:
@@ -42,7 +40,7 @@ if(Usuario.nome === login || Usuario.email === login){
 let nota = 90;
 
 if (nota >= 90) console.log("Aprovado com A");
-if (nota >= 70 && nota <90) console.log("Aprovado com B")
+if (nota >= 70 && nota < 90) console.log("Aprovado com B")
 if (nota < 70) console.log("Reprovado")
 
 // 5. Crie uma variável `saldo` e verifique:
@@ -52,11 +50,11 @@ if (nota < 70) console.log("Reprovado")
 
 let saldo = -10;
 
-if(saldo > 0) console.log("Saldo positivo")
-if(saldo === 0) console.log("Sem Saldo")
-if(saldo < 0) console.log("Saldo negativo")
+if (saldo > 0) console.log("Saldo positivo")
+if (saldo === 0) console.log("Sem Saldo")
+if (saldo < 0) console.log("Saldo negativo")
 
 // 6. Use o operador `!` para verificar se uma luz está apagada e ligue-a.
 
 let estaAcesa = false
-if(!estaAcesa) estaAcesa = true
+if (!estaAcesa) estaAcesa = true
