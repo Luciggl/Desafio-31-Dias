@@ -5,6 +5,13 @@
 // 3. Converta uma frase para letras maiúsculas e remova os espaços em branco nas extremidades.
 // 4. Substitua a palavra "erro" por "correção" na string `"Houve um erro no sistema."`.
 // 5. Divida a frase `"Eu amo JavaScript"` em palavras separadas e exiba cada uma.
+
+let texto = "Eu amo JavaScript";
+let palavras = texto.split(" ");
+for(i = 0; i < palavras.length; i++){
+    console.log(palavras[i])
+}
+
 // 6. Valide se um URL começa com `https://` e termina com `.com`.
 let Url = "https://localhost:8081.com";
 if(Url.startsWith("https://") && Url.endsWith(".com")){
