@@ -7,6 +7,13 @@ let nomeSepatado = nome.split(" ");
 console.log(`Olá sr ${nomeSepatado[0]}, Seja Bem Vindo!`)
 
 // 2. Verifique se uma string contém a palavra "Java" e exiba uma mensagem personalizada.
+
+let texto2 = "Eu tenho total fluencia em Java"
+
+if(texto2.includes("Java")){
+    console.log("Achoo")
+} else console.log("Tem nada aqui")
+
 // 3. Converta uma frase para letras maiúsculas e remova os espaços em branco nas extremidades.
 // 4. Substitua a palavra "erro" por "correção" na string `"Houve um erro no sistema."`.
 // 5. Divida a frase `"Eu amo JavaScript"` em palavras separadas e exiba cada uma.
