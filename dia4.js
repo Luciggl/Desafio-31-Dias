@@ -21,6 +21,10 @@ texto3 = texto3.trim().toUpperCase();
 console.log(texto3)
 
 // 4. Substitua a palavra "erro" por "correção" na string `"Houve um erro no sistema."`.
+
+let texto4 = "Houve um erro no sistema."
+texto4 = texto4.replace("erro", "correção");
+console.log(texto4)
 // 5. Divida a frase `"Eu amo JavaScript"` em palavras separadas e exiba cada uma.
 
 let texto = "Eu amo JavaScript";
