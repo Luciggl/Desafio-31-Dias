@@ -15,6 +15,11 @@ if(texto2.includes("Java")){
 } else console.log("Tem nada aqui")
 
 // 3. Converta uma frase para letras maiúsculas e remova os espaços em branco nas extremidades.
+
+let texto3 = " acesso negado "
+texto3 = texto3.trim().toUpperCase();
+console.log(texto3)
+
 // 4. Substitua a palavra "erro" por "correção" na string `"Houve um erro no sistema."`.
 // 5. Divida a frase `"Eu amo JavaScript"` em palavras separadas e exiba cada uma.
 
