@@ -2,7 +2,7 @@
 
 // 1. Use um loop `for` para imprimir os números de 1 a 10 no console.
 
-for(let i = 1; i <=10; i++){
+for (let i = 1; i <= 10; i++) {
     console.log(i)
 }
 
@@ -10,16 +10,16 @@ for(let i = 1; i <=10; i++){
 
 const pessoas = ["joão", "maria", "patricia", "pedro"]
 
-for(let j = 0; j < pessoas.length; ++j){
+for (let j = 0; j < pessoas.length; ++j) {
     console.log(pessoas[j])
 }
 
 // 3. Escreva um código que verifica se um número em um array é maior que 10. Pare de verificar assim que encontrar o primeiro.
 
-const arrayNumeros = [1, 2, 3, 5,10, 12, 20]
+const arrayNumeros = [1, 2, 3, 5, 10, 12, 20]
 
-for(let i = 0; i < arrayNumeros.length; i++){
-    if(arrayNumeros[i] > 10){
+for (let i = 0; i < arrayNumeros.length; i++) {
+    if (arrayNumeros[i] > 10) {
         console.log(`Primeiro numero maior que 10 encontrado no array foi ${arrayNumeros[i]}`)
         break
     }
@@ -29,19 +29,26 @@ for(let i = 0; i < arrayNumeros.length; i++){
 
 let contagemRegressiva = 10;
 
-while(contagemRegressiva !== 0){
+while (contagemRegressiva !== 0) {
     contagemRegressiva--
 }
 console.log("Lançamento!")
 
 // 5. Com um `do...while`, simule um caixa eletrônico pedindo a senha até que ela esteja correta.
 
-let senha = "0928";
-let tentativa;
+// let senha = "0928";
+// let tentativa;
 
-do {
-    tentativa = prompt("Digite sua senha");
-} while (tentativa !== senha);
-console.log("Senha correta")
+// do {
+//     tentativa = prompt("Digite sua senha");
+// } while (tentativa !== senha);
+// console.log("Senha correta")
 
 // 6. Escreva um loop que calcula o fatorial de um número (ex: `5! = 5*4*3*2*1`).
+
+let numero = 10;
+let resultado = 1;
+for(let k = 1; k <= numero; k++){
+    resultado *= k
+}
+console.log(resultado)
