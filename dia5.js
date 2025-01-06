@@ -35,4 +35,13 @@ while(contagemRegressiva !== 0){
 console.log("Lançamento!")
 
 // 5. Com um `do...while`, simule um caixa eletrônico pedindo a senha até que ela esteja correta.
+
+let senha = "0928";
+let tentativa;
+
+do {
+    tentativa = prompt("Digite sua senha");
+} while (tentativa !== senha);
+console.log("Senha correta")
+
 // 6. Escreva um loop que calcula o fatorial de um número (ex: `5! = 5*4*3*2*1`).
