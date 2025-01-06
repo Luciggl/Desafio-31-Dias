@@ -26,5 +26,13 @@ for(let i = 0; i < arrayNumeros.length; i++){
 }
 
 // 4. Use um `while` para simular um contador de 10 a 0 e exiba "Lançamento!" quando atingir 0.
+
+let contagemRegressiva = 10;
+
+while(contagemRegressiva !== 0){
+    contagemRegressiva--
+}
+console.log("Lançamento!")
+
 // 5. Com um `do...while`, simule um caixa eletrônico pedindo a senha até que ela esteja correta.
 // 6. Escreva um loop que calcula o fatorial de um número (ex: `5! = 5*4*3*2*1`).
