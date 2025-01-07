@@ -34,4 +34,16 @@ const mediaNumeros = (numero1, numero2, numero3) => {
 console.log(mediaNumeros(10, 9, 8))
 
 // 5. Crie uma função que receba um array de números e retorne a soma deles.
+
+const somaArray = (listaNumeros) => {
+    let soma = 0;
+    for (let i = 0; i < listaNumeros.length; i++) {
+        soma += listaNumeros[i]
+    }
+    return soma;
+}
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13]
+
+console.log(somaArray(numeros))
 // 6. Escreva uma função que receba uma string e retorne o número de caracteres dessa string.
