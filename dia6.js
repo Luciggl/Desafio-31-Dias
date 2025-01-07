@@ -17,6 +17,12 @@ for(compra in compras){
 const numeros = [10, 20, 30, 40, 50]
 numeros.splice(3, 2)
 console.log(numeros)
+
 // 4. Crie um array de tarefas e remova a primeira tarefa usando `shift`.
+
+const tarefas = ["arrumar a casa", "limpar o quintal", "aparar o capim", "lavar Roupa"]
+tarefas.shift();
+console.log(tarefas)
+
 // 5. Use `splice` para substituir o terceiro item de um array por "Substituído".
 // 6. Transforme um array de palavras em uma frase completa usando `join`.
