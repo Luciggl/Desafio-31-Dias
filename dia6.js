@@ -25,4 +25,8 @@ tarefas.shift();
 console.log(tarefas)
 
 // 5. Use `splice` para substituir o terceiro item de um array por "Substituído".
+
+const array = ["agua", "fogo", "terra", "ar", "avião", "baleia", "pera"]
+array.splice(2, 1, "Substituido")
+console.log(array)
 // 6. Transforme um array de palavras em uma frase completa usando `join`.
