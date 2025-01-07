@@ -25,5 +25,13 @@ const verificarMaiorNumero = (numero1, numero2) => {
 console.log(verificarMaiorNumero(10, 8))
 
 // 4. Implemente uma função que calcule a média de três números.
+
+const mediaNumeros = (numero1, numero2, numero3) => {
+    let media = (numero1 + numero2 + numero3) / 3
+    return media;
+}
+
+console.log(mediaNumeros(10, 9, 8))
+
 // 5. Crie uma função que receba um array de números e retorne a soma deles.
 // 6. Escreva uma função que receba uma string e retorne o número de caracteres dessa string.
