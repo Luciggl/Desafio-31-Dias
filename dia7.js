@@ -46,4 +46,10 @@ const somaArray = (listaNumeros) => {
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13]
 
 console.log(somaArray(numeros))
+
 // 6. Escreva uma função que receba uma string e retorne o número de caracteres dessa string.
+const retornarNumerosCaracteres = (texto) => {
+    return texto.length
+}
+
+console.log(retornarNumerosCaracteres("joão"))
