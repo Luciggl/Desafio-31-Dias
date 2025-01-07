@@ -29,4 +29,9 @@ console.log(tarefas)
 const array = ["agua", "fogo", "terra", "ar", "avião", "baleia", "pera"]
 array.splice(2, 1, "Substituido")
 console.log(array)
+
 // 6. Transforme um array de palavras em uma frase completa usando `join`.
+
+const fraseArray = ["Ola " , "tudo bem? ", "Meu ", "nome ", "é ", "pedro"]
+let frase = fraseArray.join(" ")
+console.log(frase)
