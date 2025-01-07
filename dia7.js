@@ -8,6 +8,13 @@ const calcularDobroNumero = (numero) => {
 console.log(calcularDobroNumero(9))
 
 // 2. Escreva uma função que receba um nome e retorne uma mensagem de boas-vindas.
+
+daBoasVindas = (nome) => {
+    return `Olá, ${nome} seja Bem Vindo!`
+}
+
+console.log(daBoasVindas("João"))
+
 // 3. Crie uma função que receba dois números e retorne o maior deles.
 // 4. Implemente uma função que calcule a média de três números.
 // 5. Crie uma função que receba um array de números e retorne a soma deles.
