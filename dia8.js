@@ -50,5 +50,20 @@ const criarTabulerio = () => {
 console.log(criarTabulerio())
 
 // 4. Verifique quantos números em uma matriz são pares.
+
+const verificarNumerosPareMatriz = (inputMatriz) => {
+    let contadorDeNumerosPares = 0;
+    for (let i = 0; i < inputMatriz.length; i++) {
+        for (let j = 0; j < inputMatriz[i].length; j++) {
+            if (inputMatriz[i][j] % 2 === 0) {
+                contadorDeNumerosPares++
+            }
+        }
+    }
+    return contadorDeNumerosPares;
+}
+
+console.log(verificarNumerosPareMatriz(matriz))
+
 // 5. Substitua todos os valores maiores que 10 em uma matriz por `0`.
 // 6. Implemente uma função que multiplique todos os elementos de uma matriz por um valor fornecido.
