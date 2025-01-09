@@ -17,11 +17,11 @@ console.log(matriz)
 
 // 2. Escreva uma função que receba uma matriz e retorne a soma de todos os seus elementos.
 
-const somaMatriz = (matrizBase) => {
+const somaMatriz = (matriz) => {
     let soma = 0
-    for (let i = 0; i < matrizBase.length; i++) {
-        for (let j = 0; j < matrizBase[i].length; j++) {
-            soma += matrizBase[i][j];
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            soma += matriz[i][j];
         }
     }
     return soma
@@ -51,11 +51,11 @@ console.log(criarTabulerio())
 
 // 4. Verifique quantos números em uma matriz são pares.
 
-const verificarNumerosPareMatriz = (inputMatriz) => {
+const verificarNumerosPareMatriz = (matriz) => {
     let contadorDeNumerosPares = 0;
-    for (let i = 0; i < inputMatriz.length; i++) {
-        for (let j = 0; j < inputMatriz[i].length; j++) {
-            if (inputMatriz[i][j] % 2 === 0) {
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            if (matriz[i][j] % 2 === 0) {
                 contadorDeNumerosPares++
             }
         }
@@ -66,4 +66,25 @@ const verificarNumerosPareMatriz = (inputMatriz) => {
 console.log(verificarNumerosPareMatriz(matriz))
 
 // 5. Substitua todos os valores maiores que 10 em uma matriz por `0`.
+
+const substituirMaiorQueDez = (matriz) => {
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            if (matriz[i][j] >= 10) {
+                matriz[i][j] = 0
+            }
+        }
+    }
+    return matriz;
+};
+
+const matrizExemplo = [
+    [1, 12, 3],
+    [4, 5, 15],
+    [7, 8, 9]
+];
+console.log(matrizExemplo)
+console.log("======================================")
+console.log(substituirMaiorQueDez(matrizExemplo))
+
 // 6. Implemente uma função que multiplique todos os elementos de uma matriz por um valor fornecido.
