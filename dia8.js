@@ -83,8 +83,20 @@ const matrizExemplo = [
     [4, 5, 15],
     [7, 8, 9]
 ];
-console.log(matrizExemplo)
+console.log("Matriz Inicio: " + matrizExemplo)
 console.log("======================================")
-console.log(substituirMaiorQueDez(matrizExemplo))
+console.log("Matriz Substituindo maiores que 10 por 0: " + substituirMaiorQueDez(matrizExemplo))
 
 // 6. Implemente uma função que multiplique todos os elementos de uma matriz por um valor fornecido.
+
+const multiplicarMatriz = (matriz, valor) => {
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            matriz[i][j] = matriz[i][j] * valor;
+        }
+    }
+    return matriz
+}
+
+console.log("======================================")
+console.log("Matriz vezes Numero 3 " + multiplicarMatriz(matrizExemplo, 3))
