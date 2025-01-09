@@ -16,6 +16,19 @@ for (let i = 0; i < 3; i++){
 console.log(matriz)
 
 // 2. Escreva uma função que receba uma matriz e retorne a soma de todos os seus elementos.
+
+const somaMatriz = (matrizBase) => {
+    let soma = 0
+    for(let i = 0; i<matrizBase.length; i++){
+        for(let j=0; j<matrizBase[i].length; j++){
+            soma += matrizBase[i][j];
+        }
+    }
+    return soma
+}
+
+console.log(somaMatriz(matriz))
+
 // 3. Crie um tabuleiro de xadrez 8x8, preenchendo-o com "⬜" e "⬛".
 // 4. Verifique quantos números em uma matriz são pares.
 // 5. Substitua todos os valores maiores que 10 em uma matriz por `0`.
