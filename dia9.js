@@ -24,6 +24,18 @@ const calcularFatorial = (numero) => {
 console.log(calcularFatorial(5))
 
 // 3. Crie uma função que some todos os números de um array usando recursão.
+
+const somaRecursao = (array) => {
+    if (array.length === 0) {
+        return 0;
+    }
+
+    return array[0] + somaRecursao(array.slice(1));
+}
+
+const array = [1, 9, 2, 5, 6, 23, 4]
+console.log(somaRecursao(array))
+
 // 4. Escreva uma função para verificar se uma palavra é um palíndromo usando recursão.
 // 5. Implemente uma função que calcule o n-ésimo termo da sequência de Fibonacci.
 // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.
