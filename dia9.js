@@ -37,5 +37,21 @@ const array = [1, 9, 2, 5, 6, 23, 4]
 console.log(somaRecursao(array))
 
 // 4. Escreva uma função para verificar se uma palavra é um palíndromo usando recursão.
+const ehPalindromo = (strng) => {
+    strng = strng.toLowerCase();
+    if(strng.length <= 1){
+        return true
+    } if (strng[0] !== strng[strng.length - 1]){
+        return false
+    }
+
+    return ehPalindromo(strng.slice(1, -1));
+
+}
+
+console.log(ehPalindromo("arara"))
+console.log(ehPalindromo("banana"))
+
+
 // 5. Implemente uma função que calcule o n-ésimo termo da sequência de Fibonacci.
 // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.
