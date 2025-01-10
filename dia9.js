@@ -64,3 +64,26 @@ const fibonacci = (numero) => {
 console.log(fibonacci(6))
 
 // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.
+
+const fs = require('fs')
+const path = require('path');
+
+const listarArquivos = (caminho) => {
+    let arquivosLista = [];
+
+    const itens = fs.readdirSync(caminho);
+
+    // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.
+    for (item of itens) {
+        const caminhoCompleto = path.join(caminho, item);
+        if (fs.statSync(caminhoCompleto).isDirectory()) {
+            arquivosLista = arquivosLista.concat(listarArquivos(caminhoCompleto));
+        } else arquivosLista.push(caminhoCompleto);
+
+    }
+    return arquivosLista;
+};
+
+const diretorioInicial = '../Desafio31Dias';
+const arquivos = listarArquivos(diretorioInicial);
+console.log(arquivos);
