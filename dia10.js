@@ -89,3 +89,20 @@ calcular.dividir(100, 6)
 
 
 // 5. Crie uma classe `Agenda` para armazenar e exibir contatos.
+
+class Agenda{
+    constructor(){
+        this.contatos = []
+    }
+    adicionar(contato){
+        this.contatos.push(contato)
+        console.log(`Contato: ${contato}, foi adicionado a sua Lista de contatos`)
+    }
+    listarContatos(){
+        console.log(this.contatos)
+    }
+}
+
+let agenda = new Agenda();
+agenda.adicionar(10199932);
+agenda.listarContatos();
