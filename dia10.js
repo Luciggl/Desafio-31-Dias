@@ -21,6 +21,29 @@ const brancaDeNeve = new livro("Branca de neve", "Chico Buarte", "2001")
 brancaDeNeve.detalhes();
 
 // 2. Implemente uma classe `ContaBancaria` com os métodos `depositar` e `sacar`.
+
+class ContaBancaria {
+    constructor(numeroConta, saldo){
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+    }
+    depositar(valor){
+        this.saldo += valor
+        console.log(`O valor de ${valor} foi depositado na conta: ${this.numeroConta}`)
+    }
+    sacar(valor){
+        this.saldo -= valor
+        console.log(`O valor de ${valor} foi sacado da conta: ${this.numeroConta}`)
+    }
+
+}
+
+let minhaConta = new ContaBancaria(1, 0)
+
+minhaConta.depositar(10)
+minhaConta.sacar(2)
+console.log(minhaConta.saldo)
+
 // 3. Crie uma classe `Pessoa` com um método que exibe "Bem-vindo, [nome]!".
 // 4. Implemente uma classe `Calculadora` com métodos para soma, subtração, multiplicação e divisão.
 // 5. Crie uma classe `Agenda` para armazenar e exibir contatos.
