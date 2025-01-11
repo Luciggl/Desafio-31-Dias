@@ -61,4 +61,31 @@ let Pedro = new Pessoa("Pedro", 17, "Masculino")
 Pedro.comprimentar();
 
 // 4. Implemente uma classe `Calculadora` com métodos para soma, subtração, multiplicação e divisão.
+
+class Calculadora{
+    somar(valor1, valor2){
+        console.log(valor1 + valor2)
+    }
+    subtrair(valor1, valor2){
+        console.log(valor1 - valor2)
+    }
+    multiplicar(valor1, valor2){
+        console.log(valor1 * valor2)
+    }
+    dividir(valor1, valor2){
+        console.log(valor1 /valor2)
+    }
+}
+
+let calcular = new Calculadora();
+console.log("soma: ")
+calcular.somar(2, 1)
+console.log("subtração: ")
+calcular.subtrair(10, 9)
+console.log("multiplicação: ")
+calcular.multiplicar(10, 8)
+console.log("Divisão: ")
+calcular.dividir(100, 6)
+
+
 // 5. Crie uma classe `Agenda` para armazenar e exibir contatos.
