@@ -45,5 +45,20 @@ minhaConta.sacar(2)
 console.log(minhaConta.saldo)
 
 // 3. Crie uma classe `Pessoa` com um método que exibe "Bem-vindo, [nome]!".
+
+class Pessoa{
+    constructor(nome, idade, sexo){
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
+    comprimentar(){
+        console.log(`Bem-vindo, ${this.nome}`)
+    }
+}
+
+let Pedro = new Pessoa("Pedro", 17, "Masculino")
+Pedro.comprimentar();
+
 // 4. Implemente uma classe `Calculadora` com métodos para soma, subtração, multiplicação e divisão.
 // 5. Crie uma classe `Agenda` para armazenar e exibir contatos.
