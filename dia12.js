@@ -76,6 +76,54 @@ carro.freiar();
 carro.desligar();
 
 // 2. Implemente uma classe `Funcionario` e uma subclasse `Gerente` que adicione um atributo `setor`.
+
+class Funcionario {
+    #salario
+    constructor(salarioInicial, nome, profissao, idade, sexo) {
+        this.#salario = salarioInicial;
+        this.nome = nome;
+        this.profissao = profissao;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
+    setarSalario(novoSalario) {
+        this.#salario = novoSalario
+        console.log(`Salario do funcionario ${this.nome} foi alterado pra ${novoSalario} com sucesso!`)
+    }
+    exibirSalario(){
+        let salario = this.#salario
+        return salario
+    }
+    exibirInformacoes() {
+        console.log(`Funcionario ${this.nome}, profissão: ${this.profissao}, idade: ${this.idade}, sexo ${this.sexo}, salario ${this.exibirSalario()}`);
+    }
+}
+
+class Gerente extends Funcionario {
+    #salario
+    constructor(salarioInicial, nome, profissao, idade, sexo, setor) {
+        super(salarioInicial, nome, profissao, idade, sexo)
+        this.setor = setor
+    }
+    exibirInformacoes() {
+        console.log(
+            `Gerente ${this.nome}, profissão: ${this.profissao}, idade: ${this.idade}, sexo: ${this.sexo}, salário: ${this.exibirSalario()}, setor: ${this.setor}`
+        );
+    }
+}
+
+const funcionario = new Funcionario(3000, "João", "Programador", 30, "Masculino");
+const gerente = new Gerente(5000, "Ana", "Gerente de TI", 40, "Feminino", "Tecnologia");
+
+console.log("\nFuncionário:");
+funcionario.exibirInformacoes();
+funcionario.setarSalario(3500);
+funcionario.exibirInformacoes();
+
+console.log("\nGerente:");
+gerente.exibirInformacoes();
+gerente.setarSalario(5500);
+gerente.exibirInformacoes();
 // 3. Crie uma superclasse `Forma` com um método para calcular área, e subclasses como `Quadrado` e `Círculo` que sobrescrevam esse método.
 // 4. Escreva uma classe `Animal` e subclasses como `Cachorro` e `Gato`, cada uma com métodos específicos.
 // 5. Crie uma classe `Conta` e uma subclasse `ContaPoupanca` que adicione juros ao saldo.
