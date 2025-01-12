@@ -160,6 +160,47 @@ const circulo = new Circulo(3);  // Raio = 3
 
 console.log(`Área do quadrado: ${quadrado.calcularArea()} unidades²`);
 console.log(`Área do círculo: ${circulo.calcularArea().toFixed(2)} unidades²`);
-
+console.log("")
 // 4. Escreva uma classe `Animal` e subclasses como `Cachorro` e `Gato`, cada uma com métodos específicos.
+
+class Animal{
+    constructor(...args) {
+        this.raca = raca;
+        this.nome = nome;
+        this.tutor = tutor
+    }
+    exibirInformacoes() {
+        console.log(`Animal: ${this.nome}, Raça: ${this.raca}, Tutor: ${this.tutor}`);
+    }
+}
+
+class Cachorro extends Animal{
+    constructor(...args){
+        super(...args)
+    }
+    latir(){
+        console.log("Au AU Au AU!")
+    }
+}
+
+class Gato extends Animal{
+    constructor(...args){
+        super(...args)
+    }
+    miar(){
+        console.log("Miau MIAU miau MIAU!")
+    }
+}
+
+const cachorro = new Cachorro("Labrador", "Rex", "João");
+const gato = new Gato("Siamês", "Luna", "Maria");
+
+console.log("Informações dos animais:");
+cachorro.exibirInformacoes();
+gato.exibirInformacoes();
+
+console.log("\nInterações dos animais:");
+cachorro.latir();
+gato.miar();
+console.log("")
 // 5. Crie uma classe `Conta` e uma subclasse `ContaPoupanca` que adicione juros ao saldo.
