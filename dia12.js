@@ -206,3 +206,55 @@ gato.miar();
 console.log("")
 
 // 5. Crie uma classe `Conta` e uma subclasse `ContaPoupanca` que adicione juros ao saldo.
+
+class Conta {
+    #saldo
+    constructor(numeroConta, titular, saldoInicial = 0) {
+        this.numeroConta = numeroConta;
+        this.titular = titular;
+        this.#saldo = saldoInicial;
+    }
+    exibirInformacoes() {
+        console.log(`Conta: ${this.numeroConta}, Titular: ${this.titular} saldo: ${this.exibirSaldo()}`)
+    }
+    exibirSaldo() {
+        return this.#saldo
+    }
+    depositar(valor) {
+        this.#saldo += valor
+        console.log(`Valor de R$: ${valor} foi depositado a sua conta`)
+    }
+    sacar(valor) {
+        this.#saldo -= valor
+        console.log(`Valor de R$: ${valor} foi sacado da sua conta`)
+
+    }
+}
+
+class ContaPoupanca extends Conta {
+    #juros
+    constructor(numeroConta, titular, saldoInicial = 0, juroAnul) {
+        super(numeroConta, titular, saldoInicial)
+        this.#juros = juroAnul
+    }
+    aplicarJuros(){
+        const juros = (this.exibirSaldo() * this.#juros) / 100
+        this.depositar(juros)
+    }
+}
+
+const conta1 = new Conta(12345, "Luciélio", 1000);
+conta1.exibirInformacoes();  
+
+conta1.depositar(500);
+conta1.exibirInformacoes();  
+
+conta1.sacar(200);
+conta1.exibirInformacoes();  
+
+
+const contaPoupanca1 = new ContaPoupanca(67890, "Luciélio", 1000, 5); 
+contaPoupanca1.exibirInformacoes(); 
+
+contaPoupanca1.aplicarJuros();
+contaPoupanca1.exibirInformacoes();
