@@ -35,7 +35,7 @@ if ((Usuario.nome === login || Usuario.email === login) && Usuario.passWord === 
 // 4. Implemente um sistema de notas onde:
 //     - Notas >= 90: "Aprovado com A"
 //     - Notas >= 70 e < 90: "Aprovado com B"
-//     - Notas < 70: "Reprovado".
+    - Notas < 70: "Reprovado".
 
 let nota = 90;
 
