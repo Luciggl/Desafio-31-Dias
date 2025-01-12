@@ -75,6 +75,7 @@ carro.darCavaloDePau();
 carro.freiar();
 carro.desligar();
 
+console.log("")
 // 2. Implemente uma classe `Funcionario` e uma subclasse `Gerente` que adicione um atributo `setor`.
 
 class Funcionario {
@@ -124,6 +125,41 @@ console.log("\nGerente:");
 gerente.exibirInformacoes();
 gerente.setarSalario(5500);
 gerente.exibirInformacoes();
+console.log("")
+
 // 3. Crie uma superclasse `Forma` com um método para calcular área, e subclasses como `Quadrado` e `Círculo` que sobrescrevam esse método.
+
+class Forma{
+    calcularArea(){
+        throw new Error("O metodo calcular area precisa ser implementado")
+    }
+}
+
+class Quadrado extends Forma{
+    constructor(lado){
+        super()
+        this.lado = lado
+    }
+    calcularArea(lado){
+        return this.lado ** 2
+    }
+}
+
+class Circulo extends Forma{
+    constructor(area){
+        super()
+        this.area = area
+    }
+    calcularArea(area){
+        return Math.PI * this.area ** 1
+    }
+}
+
+const quadrado = new Quadrado(5); // Lado = 5
+const circulo = new Circulo(3);  // Raio = 3
+
+console.log(`Área do quadrado: ${quadrado.calcularArea()} unidades²`);
+console.log(`Área do círculo: ${circulo.calcularArea().toFixed(2)} unidades²`);
+
 // 4. Escreva uma classe `Animal` e subclasses como `Cachorro` e `Gato`, cada uma com métodos específicos.
 // 5. Crie uma classe `Conta` e uma subclasse `ContaPoupanca` que adicione juros ao saldo.
