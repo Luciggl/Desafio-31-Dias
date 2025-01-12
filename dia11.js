@@ -43,5 +43,20 @@ user.alterarSenha(321)
 console.log(user.verificar(321))
 
 // 3. Crie uma classe `ControleRemoto` com métodos para ligar e desligar a TV, escondendo o estado interno.
+
+class ControleRemoto{
+    ligarTv(){
+        console.log("Ligando TV...")
+    }
+    desligarTv(){
+        console.log("Desligando TV...")
+    }
+}
+
+const controleCasa = new ControleRemoto;
+
+controleCasa.ligarTv();
+controleCasa.desligarTv();
+
 // 4. Escreva uma classe `Cofre` que armazena valores privados e só permite acesso com uma senha correta.
 // 5. Implemente um sistema de carrinho de compras com itens privados e métodos para adicionar, remover e listar os itens.
