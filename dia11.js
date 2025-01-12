@@ -24,6 +24,24 @@ conta.sacar(1)
 console.log(conta.consultarSaldo())
 
 // 2. Implemente uma classe `Usuario` que armazena uma senha privada e permite alterar a senha com validação.
+
+class Usuario {
+    #senha
+    constructor(senhaInicial){
+        this.#senha = senhaInicial
+    }
+    alterarSenha(novaSenha){
+        this.#senha = novaSenha
+    }
+    verificar(senha){
+        return this.#senha === senha
+    }
+}
+
+const user = new Usuario(123);
+user.alterarSenha(321)
+console.log(user.verificar(321))
+
 // 3. Crie uma classe `ControleRemoto` com métodos para ligar e desligar a TV, escondendo o estado interno.
 // 4. Escreva uma classe `Cofre` que armazena valores privados e só permite acesso com uma senha correta.
 // 5. Implemente um sistema de carrinho de compras com itens privados e métodos para adicionar, remover e listar os itens.
