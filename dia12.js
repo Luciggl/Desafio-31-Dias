@@ -91,7 +91,7 @@ class Funcionario {
         this.#salario = novoSalario
         console.log(`Salario do funcionario ${this.nome} foi alterado pra ${novoSalario} com sucesso!`)
     }
-    exibirSalario(){
+    exibirSalario() {
         let salario = this.#salario
         return salario
     }
@@ -129,28 +129,28 @@ console.log("")
 
 // 3. Crie uma superclasse `Forma` com um método para calcular área, e subclasses como `Quadrado` e `Círculo` que sobrescrevam esse método.
 
-class Forma{
-    calcularArea(){
+class Forma {
+    calcularArea() {
         throw new Error("O metodo calcular area precisa ser implementado")
     }
 }
 
-class Quadrado extends Forma{
-    constructor(lado){
+class Quadrado extends Forma {
+    constructor(lado) {
         super()
         this.lado = lado
     }
-    calcularArea(lado){
+    calcularArea(lado) {
         return this.lado ** 2
     }
 }
 
-class Circulo extends Forma{
-    constructor(area){
+class Circulo extends Forma {
+    constructor(area) {
         super()
         this.area = area
     }
-    calcularArea(area){
+    calcularArea(area) {
         return Math.PI * this.area ** 1
     }
 }
@@ -161,33 +161,34 @@ const circulo = new Circulo(3);  // Raio = 3
 console.log(`Área do quadrado: ${quadrado.calcularArea()} unidades²`);
 console.log(`Área do círculo: ${circulo.calcularArea().toFixed(2)} unidades²`);
 console.log("")
+
 // 4. Escreva uma classe `Animal` e subclasses como `Cachorro` e `Gato`, cada uma com métodos específicos.
 
-class Animal{
-    constructor(...args) {
+class Animal {
+    constructor(raca, nome, tutor) {
         this.raca = raca;
         this.nome = nome;
-        this.tutor = tutor
+        this.tutor, tutor;
     }
     exibirInformacoes() {
         console.log(`Animal: ${this.nome}, Raça: ${this.raca}, Tutor: ${this.tutor}`);
     }
 }
 
-class Cachorro extends Animal{
-    constructor(...args){
+class Cachorro extends Animal {
+    constructor(...args) {
         super(...args)
     }
-    latir(){
+    latir() {
         console.log("Au AU Au AU!")
     }
 }
 
-class Gato extends Animal{
-    constructor(...args){
+class Gato extends Animal {
+    constructor(...args) {
         super(...args)
     }
-    miar(){
+    miar() {
         console.log("Miau MIAU miau MIAU!")
     }
 }
@@ -203,4 +204,5 @@ console.log("\nInterações dos animais:");
 cachorro.latir();
 gato.miar();
 console.log("")
+
 // 5. Crie uma classe `Conta` e uma subclasse `ContaPoupanca` que adicione juros ao saldo.
