@@ -83,4 +83,46 @@ cofrePessoal.adicionarNoCofre("Arma ")
 cofrePessoal.adicionarNoCofre("Joias ")
 cofrePessoal.adicionarNoCofre("Chave carro ")
 console.log(cofrePessoal.exibirValores(2012))
+
 // 5. Implemente um sistema de carrinho de compras com itens privados e métodos para adicionar, remover e listar os itens.
+
+class CarrinhoCompra {
+    #itens
+    constructor(){
+        this.#itens = []
+    }
+    adicionarAoCarrinho(item){
+        this.#itens.push(item)
+        console.log(`${item} foi adicionado ao carrinho`)
+    }
+    removerDoCarrinho(nomeItem){
+        let index = this.#itens.indexOf(nomeItem)
+        if(index !== -1){
+            const removedItem = this.#itens.slice(index, 1)[0];
+            return console.log(`${removedItem} foi removido do carrinho`)
+        }
+        return console.log(`Produto ${nomeItem}, não foi encontrado no carrinho`)
+    }
+    listarItens(){
+        return console.log(`Lista de Produtos: ${this.#itens}`)
+    }
+}
+
+const carrinho = new CarrinhoCompra();
+
+carrinho.adicionarAoCarrinho("Arroz");
+carrinho.adicionarAoCarrinho("Feijão");
+carrinho.adicionarAoCarrinho("Macarrão");
+
+carrinho.listarItens();
+
+carrinho.removerDoCarrinho("Feijão");
+
+carrinho.listarItens();
+
+carrinho.removerDoCarrinho("Pão");
+
+carrinho.adicionarAoCarrinho("Leite");
+carrinho.adicionarAoCarrinho("Açúcar");
+
+carrinho.listarItens();
