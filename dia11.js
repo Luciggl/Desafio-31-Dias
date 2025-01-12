@@ -59,4 +59,28 @@ controleCasa.ligarTv();
 controleCasa.desligarTv();
 
 // 4. Escreva uma classe `Cofre` que armazena valores privados e só permite acesso com uma senha correta.
+
+class Cofre{
+    #senha
+    #itens
+    constructor(senhaInicial){
+        this.#senha = senhaInicial
+        this.#itens = []
+    }
+    adicionarNoCofre(item){
+        this.#itens.push(item)
+    }
+    exibirValores(senha){
+        if(this.#senha === senha){
+            return `Itens do cofre: ${this.#itens}`
+        } else return `Acesso negado!`
+    }
+}
+
+
+const cofrePessoal = new Cofre(2012);
+cofrePessoal.adicionarNoCofre("Arma ")
+cofrePessoal.adicionarNoCofre("Joias ")
+cofrePessoal.adicionarNoCofre("Chave carro ")
+console.log(cofrePessoal.exibirValores(2012))
 // 5. Implemente um sistema de carrinho de compras com itens privados e métodos para adicionar, remover e listar os itens.
