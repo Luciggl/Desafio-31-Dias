@@ -14,7 +14,7 @@ if(texto2.includes("Java")){
     console.log("Achoo")
 } else console.log("Tem nada aqui")
 
-3. Converta uma frase para letras maiúsculas e remova os espaços em branco nas extremidades.
+// 3. Converta uma frase para letras maiúsculas e remova os espaços em branco nas extremidades.
 
 let texto3 = " acesso negado "
 texto3 = texto3.trim().toUpperCase();
