@@ -127,4 +127,38 @@ pdf1.exibirConteudo();
 word1.exibirConteudo(); 
 
 // 4. Implemente um sistema de animais com uma superclasse `Animal` e métodos específicos em subclasses como `Passaro` e `Peixe`.
+
+class Animal {
+    constructor(nome) {
+        this.nome = nome;
+    }
+    mover() {
+        console.log(`${this.nome} está se movendo`);
+    }
+}
+
+class Passaro extends Animal {
+    constructor(...args) {
+        super(...args);
+    }
+    mover() {
+        console.log(`${this.nome} está voando`);
+    }
+}
+
+class Peixe extends Animal {
+    constructor(...args) {
+        super(...args);
+    }
+    mover() {
+        console.log(`${this.nome} está nadando`);
+    }
+}
+
+const passaro = new Passaro("Papagaio");
+const peixe = new Peixe("Salmão");
+
+passaro.mover();
+peixe.mover();  
+
 // 5. Use o polimorfismo para criar uma lista de diferentes formas geométricas (`Quadrado`, `Círculo`, etc.) e calcule suas áreas.
