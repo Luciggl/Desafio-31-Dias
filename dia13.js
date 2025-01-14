@@ -19,7 +19,7 @@ class Desenvolvedor extends Funcionario{
         super(...args)
     }
     calcularSalario(){
-        return this.valorHora * this.horaTrabalhada + 0.05 
+        return this.valorHora * this.horaTrabalhada * 1.05 
     }
 }
 
@@ -28,7 +28,7 @@ class Gerente extends Funcionario{
         super(...args)
     }
     calcularSalario(){
-        return this.horaTrabalhada * this.valorHora + 0.10
+        return this.horaTrabalhada * this.valorHora * 1.10
     }
 }
 
@@ -42,6 +42,52 @@ console.log(`Salário de ${gerente1.nome} (${gerente1.funcao}): R$${gerente1.cal
 
 
 // 2. Implemente uma classe `Transporte` e subclasses como `Carro`, `Avião` e `Barco`, cada uma com seu método `mover`.
+
+class Transporte{
+    constructor(nomeVeiculo, marca, velocidadeFinal) {
+        this.nomeVeiculo = nomeVeiculo;
+        this.marca = marca;
+        this.velocidadeFinal = velocidadeFinal;
+    }
+    mover(){
+        return console.log(`O veiculo ${this.nomeVeiculo} esta se movendo`)
+    }
+}
+
+class Carro extends Transporte{
+    constructor(...args){
+        super(...args)
+    }
+    mover(){
+        return console.log(`O Carro ${this.nomeVeiculo} esta se movendo na rodovia`)
+    }
+}
+
+class Aviao extends Transporte{
+    constructor(...args){
+        super(...args)
+    }
+    mover(){
+        return console.log(`O Avião ${this.nomeVeiculo} esta cruzando os ares`)
+    }
+}
+class Barco extends Transporte{
+    constructor(...args){
+        super(...args)
+    }
+    mover(){
+        return console.log(`O barco ${this.nomeVeiculo} esta velejando por ai`)
+    }
+}
+
+const carro = new Carro("Fusca", "Volkswagen", 160);
+const aviao = new Aviao("Boeing 747", "Boeing", 900);
+const barco = new Barco("Titanic", "White Star Line", 40);
+
+carro.mover(); 
+aviao.mover();
+barco.mover(); 
+
 // 3. Crie uma superclasse `Documento` com um método `exibirConteudo`, e subclasses como `PDF` e `Word` que personalizem esse método.
 // 4. Implemente um sistema de animais com uma superclasse `Animal` e métodos específicos em subclasses como `Passaro` e `Peixe`.
 // 5. Use o polimorfismo para criar uma lista de diferentes formas geométricas (`Quadrado`, `Círculo`, etc.) e calcule suas áreas.
