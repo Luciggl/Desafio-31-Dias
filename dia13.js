@@ -162,3 +162,50 @@ passaro.mover();
 peixe.mover();  
 
 // 5. Use o polimorfismo para criar uma lista de diferentes formas geométricas (`Quadrado`, `Círculo`, etc.) e calcule suas áreas.
+
+class Forma {
+    calcularArea() {
+        throw new Error("O método calcularArea() deve ser implementado pelas subclasses");
+    }
+}
+
+class Quadrado extends Forma {
+    constructor(lado) {
+        super();
+        this.lado = lado;
+    }
+    calcularArea() {
+        return this.lado * this.lado;
+    }
+}
+
+class Circulo extends Forma {
+    constructor(raio) {
+        super();
+        this.raio = raio;
+    }
+    calcularArea() {
+        return Math.PI * this.raio * this.raio;
+    }
+}
+
+class Retangulo extends Forma {
+    constructor(largura, altura) {
+        super();
+        this.largura = largura;
+        this.altura = altura;
+    }
+    calcularArea() {
+        return this.largura * this.altura;
+    }
+}
+ 
+const formas = [
+    new Quadrado(4),
+    new Circulo(3),
+    new Retangulo(5, 10)
+];
+
+formas.forEach(forma => {
+    console.log(`Área da forma: ${forma.calcularArea().toFixed(2)}`);
+});
